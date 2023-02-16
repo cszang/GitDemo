@@ -1,5 +1,5 @@
 data(mtcars)
-attach(mtcars)
-mpg_per_cyl <- aggregate(mpg, by = list(cyl), FUN = mean)
-names(mpg_per_cyl) <- c("cyl", "avg_mpg")
-mpg_per_cyl
+library(tidyverse)
+mpg_by_cyl <- mtcars %>% 
+  group_by(cyl) %>% 
+  summarise(avg_mpg = mean(mpg))
