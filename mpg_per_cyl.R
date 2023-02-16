@@ -8,6 +8,6 @@ mpg_by_cyl <- mtcars %>%
 
 ggplot(mtcars, aes(cyl, mpg)) +
   geom_point() +
-  geom_smooth(colour = "lightsalmon")
+  geom_smooth(colour = "blue")
 
 ggsave("cyl_vs_mpg.pdf")
